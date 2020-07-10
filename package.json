@@ -6,31 +6,32 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/server/index.js",
     "build-prod": "webpack --config webpack.prod.js",
-    "build-dev": "webpack-dev-server --config webpack.dev.js --open"
+    "build-dev": "webpack-dev-server  --config webpack.dev.js --open"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "body": "^5.1.0",
+    "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "parser": "^0.1.4",
     "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.12"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
-    "babel-loader": "^8.1.0",
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
+    "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
-    "css-loader": "^3.5.3",
-    "eslint": "^6.8.0",
-    "eslint-loader": "^4.0.2",
-    "html-webpack-plugin": "^4.2.0",
-    "node-sass": "^4.14.0",
-    "sass-loader": "^8.0.2",
-    "style-loader": "^1.2.0",
-    "webpack-bundle-analyzer": "^3.7.0",
-    "webpack-dev-server": "^3.10.3"
+    "css-loader": "^3.6.0",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^9.0.2",
+    "style-loader": "^1.2.1",
+    "webpack-bundle-analyzer": "^3.8.0",
+    "webpack-dev-server": "^3.11.0"
   }
 }
