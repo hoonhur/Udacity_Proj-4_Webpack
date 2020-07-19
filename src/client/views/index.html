@@ -2,19 +2,13 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Test</title>
-        <link rel="stylesheet" href="/styles/resets.css">
-        <link rel="stylesheet" href="/styles/base.css">
-        <link rel="stylesheet" href="/styles/header.css">
-        <link rel="stylesheet" href="/styles/form.css">
-        <link rel="stylesheet" href="/styles/footer.css">
+        <title>Evaluate News NLP</title>
     </head>
 
     <body>
-
         <header>
             <div class="">
-                Logo
+                <h1>News NLP</h1>
             </div>
             <div class="">
                 navigation
@@ -23,15 +17,33 @@
 
         <main>
             <section>
-                <form class="" onsubmit="return handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                    <label for="url">Please input URL of news</label>
+                    <input id="url" type="url" placeholder="https://">
+                    <input type="submit" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
                 </form>
             <section>
 
             <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
+                <h2><strong>Form Results:</strong></h2>
+                <ul>
+                    <li>
+                      <h3>Text Polarity:</h3>
+                      <p id="polarity"></p>
+                      <h4>Confidence:</h4>
+                      <p id="polarity_confidence"></p>
+                    </li>
+                    <li>
+                      <h3>Text Subjectivity:</h3>
+                      <p id="subjectivity"></p>
+                      <h4>Confidence:</h4>
+                      <p id="subjectivity_confidence"></p>
+                    </li>
+                    <li>
+                      <h3>Text Excerpt:</h3>
+                      <p id="excerpt"></p>
+                    </li>
+                  </ul>
             </section>
         </main>
 
