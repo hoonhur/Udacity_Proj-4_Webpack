@@ -7,9 +7,9 @@ function handleSubmit(event) {
 
     console.log("::: Form Submitted :::")
 
-    postData('/api', {text: url})
+    postData('http://localhost:8082/api', {text: url})
     .then(() => {
-        getSentiment('/projectData')
+        getSentiment('http://localhost:8082/projectData')
     })
     .then(() => {
         updateUI()
@@ -34,7 +34,7 @@ function handleSubmit(event) {
     }
 
 const getSentiment = async (url) => {
-    const res = await fetch ('/projectData')
+    const res = await fetch ('http://localhost:8082/projectData')
     try {
         const data = await res.json()
         return data
@@ -44,7 +44,7 @@ const getSentiment = async (url) => {
 }
 
 const updateUI = async () => {
-    const req = await fetch('/sentiment')
+    const req = await fetch('http://localhost:8082/projectData')
     try {
         const allData = await req.json()
         console.log(allData.polarity)
@@ -53,8 +53,6 @@ const updateUI = async () => {
         document.getElementById('subjectivity').innerHTML = allData.subjectivity;
         document.getElementById('subjectivity_confidence').innerHTML = allData.subjectivity_confidence
         document.getElementById('excerpt').innerHTML = allData.text;
-       
-        
     } catch(error) {
         console.log('error at updateUI', error)
 
