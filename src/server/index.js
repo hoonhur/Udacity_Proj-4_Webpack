@@ -6,7 +6,9 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 
-const mockAPIResponse = require('./mockAPI.js')
+const regeneratorRuntime = require("regenerator-runtime")
+
+// const mockAPIResponse = require('./mockAPI.js')
 
 
 const app = express()
@@ -21,11 +23,11 @@ app.get('/', (req, res) => res.sendFile('dist/index.html'))
 // designates what port the app will listen to for incoming requests
 app.listen(8082, () => console.log('Example app listening on port 8082!'))
 
-const Aylien = require('aylien_textapi')
+var AylienTextAPI = require('aylien_textapi')
 
 projectData = {}
 
-const textApi = new Aylien({
+var textApi = new AylienTextAPI({
   application_id: process.env.API_ID,
   application_key: process.env.API_KEY
 })
