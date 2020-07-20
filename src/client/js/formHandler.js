@@ -52,7 +52,7 @@ const updateUI = async () => {
         document.getElementById('polarity_confidence').innerHTML = allData.polarity_confidence;
         document.getElementById('subjectivity').innerHTML = allData.subjectivity;
         document.getElementById('subjectivity_confidence').innerHTML = allData.subjectivity_confidence
-        document.getElementById('exerpt').innerHTML = allData.text;
+        document.getElementById('excerpt').innerHTML = allData.text;
        
         
     } catch(error) {
